@@ -2,11 +2,12 @@
 
 // Vehicle.php
 
-class Vehicle
+abstract class Vehicle
 {
     const ALLOWED_ENERGIES = [
         'fuel',
-        'electric'];
+        'electric',
+        'muscles'];
 // Do not modify the rest of the file
 
     /**
@@ -37,7 +38,7 @@ class Vehicle
     /**
      * @var integer
      */
-    private $energyLevel;
+    protected $energyLevel;
 
     public function __construct(string $color, int $nbSeats, string $energy)
     {

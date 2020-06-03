@@ -1,109 +1,17 @@
 <?php
-class Car
+
+require_once 'Vehicle.php';
+
+class Car extends Vehicle
 {
-    /**
-     * @var string
-     */
-    private $color;
-    /**
-     * @var integer
-     */
-    private $currentSpeed;
-    /**
-     * @var integer
-     */
-    private $nbSeats;
-    /**
-     * @var integer
-     */
-    private $nbWheels = 4;
-    /**
-     * @var string
-     */
-    private $energy;
-    /**
-     * @var integer
-     */
-    private $energyLevel;
-
-    public function __construct(string $color)
+    public function __construct($color, $nbSeats, $energy)
     {
-        $this->color = $color;
+        parent::__construct($color, $nbSeats, $energy);
     }
 
-    /**
-     * @return string
-     */
-    public function getColor(): string
-    {
-        return $this->color;
-    }
+    const ALLOWED_ENERGIES = [
+        'fuel',
+        'electric'];
+// Do not modify the rest of the file
 
-    /**
-     *
-     * @return int
-     */
-    public function getEnergyLevel(): int
-    {
-        return $this->EnergyLevel;
-    }
-    /**
-     *
-     * @return string
-     */
-    public function getEnergy(): string
-    {
-        return $this->energy;
-    }
-
-    /**
-     * @param int $currentSpeed
-     * @return void
-     */
-    public function setCurrentSpeed(int $currentSpeed): void
-    {
-        if ($currentSpeed >= 0) {
-            $this->currentSpeed = $currentSpeed;
-        }
-
-    }
-
-    /**
-     * @return int
-     */
-    public function getCurrentSpeed(): int
-    {
-        return $this->currentSpeed;
-    }
-
-
-    public function start(bool $start): void
-    {
-        if ($start === false)
-        {
-            $start === true;
-        }
-    }
-    public function getNbWheels(int $nbWheels): int
-    {
-        return $this->nbWheels;
-    }
-
-    public function forward()
-    {
-        $this->currentSpeed = 15;
-
-        return "Go !";
-    }
-
-    public function brake(): string
-    {
-        $sentence = "";
-        while ($this->currentSpeed > 0) {
-            $this->currentSpeed--;
-            $sentence .= "Brake !!!";
-        }
-        $sentence .= "I'm stopped !";
-        return $sentence;
-    }
 }
