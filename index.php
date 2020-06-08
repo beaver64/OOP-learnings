@@ -3,7 +3,7 @@ require_once 'Car.php';
 require_once 'Bicycle.php';
 require_once 'Truck.php';
 $newcar = new Car('blue', 4, 'electric');
-$newTruck = new Truck(33000, 'red', 3, 'muscles', 8000);
+$newTruck = new Truck(33000, 'red', 3, 'muscles');
 
 // Moving car
 echo $newcar->forward();

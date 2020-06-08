@@ -15,9 +15,9 @@ class Truck extends Vehicle
     private
     $charge = 0;
 
-    public function __construct(int $chargeCapacity, $color, $nbSeats, $energy, $currentSpeed)
+    public function __construct(int $chargeCapacity, $color, $nbSeats, $energy)
     {
-        parent::__construct($color, $nbSeats, $energy, $currentSpeed);
+        parent::__construct($color, $nbSeats, $energy);
         $this->chargeCapacity = $chargeCapacity;
     }
 
