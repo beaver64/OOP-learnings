@@ -20,10 +20,10 @@ echo $newTruck->brake();
 
 echo $newTruck->fillingGood(33000);
 
-echo "<br>" . $newtruck->forward();
-echo "<br> Vitesse du camion : " . $newtruck->getCurrentSpeed() . " km/h <br>";
-echo $newtruck->brake();
-echo "<br> Vitesse du camion : " . $newtruck->getCurrentSpeed() . " km/h <br>";
-echo $newtruck->brake() . "<br>";
+echo "<br>" . $newTruck->forward();
+echo "<br> Vitesse du camion : " . $newTruck->getCurrentSpeed() . " km/h <br>";
+echo $newTruck->brake();
+echo "<br> Vitesse du camion : " . $newTruck->getCurrentSpeed() . " km/h <br>";
+echo $newTruck->brake() . "<br>";
 echo "<br>";
 
