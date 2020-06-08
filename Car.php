@@ -8,10 +8,4 @@ class Car extends Vehicle
     {
         parent::__construct($color, $nbSeats, $energy);
     }
-
-    const ALLOWED_ENERGIES = [
-        'fuel',
-        'electric'];
-// Do not modify the rest of the file
-
 }

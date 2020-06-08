@@ -15,9 +15,9 @@ class Truck extends Vehicle
     private
     $charge = 0;
 
-    public function __construct(int $chargeCapacity, $color, $nbSeats, $energy)
+    public function __construct(int $chargeCapacity, $color, $nbSeats, $energy, $currentSpeed)
     {
-        parent::__construct($color, $nbSeats, $energy);
+        parent::__construct($color, $nbSeats, $energy, $currentSpeed);
         $this->chargeCapacity = $chargeCapacity;
     }
 
@@ -26,21 +26,22 @@ class Truck extends Vehicle
      * @return string
      */
     public function getEnergy(): string
-{
-    if (in_array($energy, self::ALLOWED_ENERGIES))
     {
-        $this->energy = $energy;
+        if (in_array($this->energy, self::ALLOWED_ENERGIES))
+        {
+            $this->energy = $getEnergy;
+        }
+        return $this;
     }
-    return $this;
-}
 
-    public
-    function fillingGood(): string
+        public function fillingGood($chargeCapacity): string
     {
-        if ($this->charge >= chargeCapacity) {
+        if ($this->charge >= $chargeCapacity) {
             return 'full';
         } else {
             return 'in filling';
         }
     }
+
+
 }

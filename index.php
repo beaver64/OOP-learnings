@@ -2,23 +2,15 @@
 require_once 'Car.php';
 require_once 'Bicycle.php';
 require_once 'Truck.php';
-$blueCar = new Car(blue, 4, electric);
-$newTruck = new Truck(33000, blue, 4, electric);
-$bike = new Bicycle(blue, 4, electric);
+$newcar = new Car('blue', 4, 'electric');
+$newTruck = new Truck(33000, 'red', 3, 'muscles', 8000);
 
-// Moving bike
-echo $bike->forward();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br>' . PHP_EOL;
 // Moving car
-echo $blueCar->forward();
-echo '<br> Vitesse de la voiture : ' . $blueCar->getCurrentSpeed() . ' km/h' . '<br>';
-echo $blueCar->brake();
-echo '<br> Vitesse de la voiture : ' . $blueCar->getCurrentSpeed() . ' km/h' . '<br>';
-echo $blueCar->brake();
+echo $newcar->forward();
+echo '<br> Vitesse de la voiture : ' . $newcar->getCurrentSpeed() . ' km/h' . '<br>';
+echo $newcar->brake();
+echo '<br> Vitesse de la voiture : ' . $newcar->getCurrentSpeed() . ' km/h' . '<br>';
+echo $newcar->brake();
 // Moving truck
 echo $newTruck->forward();
 echo '<br> Vitesse du camion : ' . $newTruck->getCurrentSpeed() . ' km/h' . '<br>';
@@ -26,4 +18,12 @@ echo $newTruck->brake();
 echo '<br> Vitesse du camion : ' . $newTruck->getCurrentSpeed() . ' km/h' . '<br>';
 echo $newTruck->brake();
 
-echo (fillingGood($newtruck));
+echo $newTruck->fillingGood(33000);
+
+echo "<br>" . $newtruck->forward();
+echo "<br> Vitesse du camion : " . $newtruck->getCurrentSpeed() . " km/h <br>";
+echo $newtruck->brake();
+echo "<br> Vitesse du camion : " . $newtruck->getCurrentSpeed() . " km/h <br>";
+echo $newtruck->brake() . "<br>";
+echo "<br>";
+
